@@ -1,0 +1,11 @@
+# config file for brosel (https://github.com/halloleo/brosel)
+basic:
+    browser_id: open -a "Google Chrome.app" %s
+rules:
+-   # rule for local files
+    browser_id: open -a Safari.app %s
+    url_pattern: '^file://'
+-   # rule for urls from emacs
+    browser_id: open -a Firefox.app %s
+    url_pattern: ^emacs-
+    url_replace: ''
