@@ -2,14 +2,16 @@
 """Select a browser to use by URL rules
 
 A script and a macOS wrapper app which can be used as OS-wide Default Browser.
-The rules are customisable through a config file. The wrapper app is generated with 
-Platypus (http://sveinbjorn.org/platypus).
+The rules are customisable through a config file.
+
+The wrapper app is generated with Platypus (http://sveinbjorn.org/platypus). 
+The rules are read with the yaml module, but they are package with the wrapper
+app.
 """
 __author__ = "halloleo"
-__version__ = "0.3.1"
+__version__ = "0.3.2"
 __copyright__ = "Copyright 2017, halloleo"
-__credits__ = ["Sveinbjorn Thordarson"]
-__appname__ = "brosel" # needs to be hardcoded because Platypus needs "script" as the file anme for script
+__appname__ = "brosel" # needs to be hard-coded because Platypus needs "script" as the filename for script
 
 import sys
 import os
@@ -49,8 +51,8 @@ logging.config.dictConfig({
     'disable_existing_loggers': False,
     'formatters': {
         'main': {
-            'datefmt':'%Y%m%d %H:%M:%S',
-            'format': '%(asctime)s %(levelname)s %(name)s: %(message)s',
+            'datefmt':'%Y-%m-%d %H:%M:%S',
+            'format': '%(asctime)s %(levelname)s: %(message)s',
         },
     },
     'handlers': {
