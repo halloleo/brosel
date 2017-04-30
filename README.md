@@ -10,10 +10,12 @@ customisable through a config file. The wrapper app is generated with
 
 Generate the wrapper app with [Platypus](http://sveinbjorn.org/platypus). You
 have to install only the command line tools, which you can do via
-[Homebrew](https://brew.sh/) (`brew install platypus`). The profile to create
-the app is stored in `brosel.platypus`. So after downloading/cloning this
-repository, `cd` into the repo directory and issue the following command in a
-shell:
+[Homebrew](https://brew.sh/) (`brew install platypus`). Make sure you install
+Platypus 5.2 or above.
+
+The profile to create the app is stored in `brosel.platypus`. So after
+downloading/cloning this repository, `cd` into the repo directory and issue
+the following command in a shell:
 
     platypus -P brosel.platypus /Applications/brosel.app
 
