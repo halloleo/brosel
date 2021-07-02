@@ -20,7 +20,7 @@ the following command in a shell:
     platypus -P brosel.platypus /Applications/brosel.app
 
 *Note 1:* Paths in the the profile are *relative*, so you need to be in the
-repository directory so tat platypus finds the script `brosel.py` and the
+repository directory so that Platypus finds the script `brosel.py` and the
 dependency `yaml`.
 
 *Note 2:* You can save the application to any directory you want,
@@ -29,8 +29,8 @@ dependency `yaml`.
 ### How to configure the custom rules
 
 `brosel` looks for its configuration in the file `~/.brosel` and then in the
-file `~/Library/Application Support/brosel.yaml`. The first one found `brosel`
-reads as a [YAML](http://www.yaml.org/spec/1.2/spec.html) file. A sample
+file `~/Library/Application Support/brosel/brosel.yaml`. The first one `brosel` finds, will be 
+read as a [YAML](http://www.yaml.org/spec/1.2/spec.html) file. A sample
 config looks like this:
 
 ```YAML
@@ -65,11 +65,20 @@ Notes: `url_pattern` and `url_replace` use the [Python variant of regular expres
 
 ### How to set `brosel` as Default web browser
 
-In **System Preferences** go to the **General** pane and se;ect nrosel.app. -
-Not: *In order to appear in this list you might have run brsoel.app at least
-once via double-click.*
+In **System Preferences** go to the **General** pane and select brosel.app. -
+Not: *In order to appear in this list you might have run brosel.app at least
+once (e.g. via double-click).*
+
+Also, if you want HTML files to go through `brosel` when double-clicked selected, choose `brosel` as "Open with" application for this file type.
+
+### How to check if something doesn't work as expected
+
+If something unexpected happens (like a URL opens not at all or in another browser than specified), you can check in `brosel`'s log file at `~/Library/Application Support/brosel/Logs/brosel.log` which action `brosel` chose.
 
 ### Credits:
 
 * Thanks to [Sveinbjorn Thordarson](http://sveinbjorn.org/) for Platypus.
 * Thanks to the [PyYaml community](http://pyyaml.org/) for [PyYaml](http://pyyaml.org/wiki/PyYAML).
+
+<!--  LocalWords:  brosel
+ -->

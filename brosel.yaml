@@ -6,6 +6,9 @@ rules:
     browser_id: open -a Safari.app %s
     url_pattern: '^file://'
 -   # rule for urls from emacs
-    browser_id: open -a Firefox.app %s
+    browser_id: open -a Safari.app %s
     url_pattern: ^emacs-
     url_replace: ''
+-   # rule for localhost
+    browser_id: open -a Safari.app %s
+    url_pattern: 'localhost'
